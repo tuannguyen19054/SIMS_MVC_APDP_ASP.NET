@@ -1,0 +1,40 @@
+﻿html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+.btn-orange {
+    background-color: darkorange;
+    border-color: darkorange;
+    color: white;
+    font-size: 16px; /* Điều chỉnh kích thước chữ */
+}
+
+    .btn-orange:hover {
+        background-color: #ff9500;
+        border-color: #ff9500;
+        color: white;
+    }
+
+/* Nếu bạn muốn áp dụng cho tất cả các nút, có thể thêm lớp này */
+.btn-custom-size {
+    font-size: 16px; /* Điều chỉnh kích thước chữ */
+}
+

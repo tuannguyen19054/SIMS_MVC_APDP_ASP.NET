@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register - School Management App MVC</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/SIMS_MVC_SE06204.styles.css" asp-append-version="true" />
+</head>
+
+<style>
+   
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+      background-image: url();
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 10vh;
+}
+.box {
+  background: #fdfdfd;
+  display: flex;
+  flex-direction: column;
+  padding: 25px 25px;
+  border-radius: 20px;
+  background-color: #fefefe;
+}
+.form-box {
+  width: 450px;
+  margin: 0px 10px;
+}
+.form-box span {
+  color: tomato;
+}
+
+.form-box header {
+  font-size: 25px;
+  font-weight: 600;
+  text-align: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e6e6e6;
+  margin-bottom: 10px;
+}
+.form-box form .field {
+  display: flex;
+  margin-bottom: 10px;
+  flex-direction: column;
+}
+.form-box form .input input {
+  height: 40px;
+  width: 100%;
+  font-size: 16px;
+  padding: 0 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+.btn {
+  height: 35px;
+  border: 0;
+  font-weight: 600;
+  border-radius: 5px;
+  background: #7A8189;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 10px;
+  padding: 0px 10px;
+  display:flex;
+  align-items:center;
+  color: black;
+}
+.btn:hover {
+  opacity: 0.82;
+  background: #E6DDCA;
+  color: black;
+  align-items:center;
+}
+.submit {
+  width: 100%;
+}
+.links {
+  margin-bottom: 15px;
+  margin-top: 25px;
+  text-align: center;
+}
+
+</style>
+<body>
+    <div class="container">
+      <div class="box form-box">
+        <header>Sign Up <br /><span>BTEC FPT</span></header>
+        <form action="" method="post">
+          <div class="field input">
+            <label for="username">Username</label>
+            <input
+              type="text"
+              name="username"
+              id="username"
+              autocomplete="off"
+              required
+            />
+          </div>
+
+          <div class="field input">
+            <label for="email">Email</label>
+            <input
+              type="text"
+              name="email"
+              id="email"
+              autocomplete="off"
+              required
+            />
+          </div>
+
+          <div class="field input">
+            <label for="age">Phone</label>
+            <input
+              type="number"
+              name="age"
+              id="age"
+              autocomplete="off"
+              required
+            />
+          </div>
+          <div class="field input">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              autocomplete="off"
+              required
+            />
+          </div>
+
+          <div class="field">
+            <input
+              type="submit"
+              class="btn"
+              name="submit"
+              value="Register"
+              required
+            />
+          </div>
+          <div class="links">Already a member? <a href="#">Sign In</a></div>
+        </form>
+      </div>
+    </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

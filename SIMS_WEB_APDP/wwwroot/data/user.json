@@ -1,0 +1,22 @@
+[
+  {
+    "Id": 1,
+    "UserName": "admin",
+    "PassWord": "admin123",
+    "Email": null,
+    "PhoneNumber": null,
+    "Role": "Admin",
+    "FailedLoginAttempts": 1,
+    "IsLocked": false
+  },
+  {
+    "Id": 2,
+    "UserName": "user",
+    "PassWord": "user123",
+    "Email": null,
+    "PhoneNumber": null,
+    "Role": "User",
+    "FailedLoginAttempts": 0,
+    "IsLocked": false
+  }
+]

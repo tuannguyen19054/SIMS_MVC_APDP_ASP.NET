@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\SIMS_WEB_APDP.props" />
+</Project>

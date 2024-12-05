@@ -1,0 +1,50 @@
+﻿@model SIMS_WEB_APDP.Models.Course
+
+<div class="card shadow border-0 mt-4">
+    <div class="card-header bg-secondary bg-gradient ml-0 py-3">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="text-white py-2">Edit Course</h2>
+            </div>
+        </div>
+    </div>
+    <div class="card-body p-4">
+        <form asp-action="Edit" method="post" class="row">
+            <input asp-for="Id" hidden />
+            <div class="border p-3">
+                <div class="form-floating py-2 col-12">
+                    <input asp-for="courseName" class="form-control border-0 shadow" oninput="onlyLetters(this)"/>
+                    <label asp-for="courseName" class="ms-2"></label>
+                    <span asp-validation-for="courseName" class="text-danger"></span>
+                </div>
+                <div class="form-floating py-2 col-12">
+                    <input asp-for="teacherName" class="form-control border-0 shadow" oninput="onlyLetters(this)"/>
+                    <label asp-for="teacherName" class="ms-2"></label>
+                    <span asp-validation-for="teacherName" class="text-danger"></span>
+                </div>
+
+                <div class="row pt-2">
+                    <div class="col-6 col-md-3">
+                        <button type="submit" class="btn btn-primary form-control">Update</button>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <a asp-controller="Course" asp-action="Index" class="btn btn-outline-primary border form-control">
+                            Back to List
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+    function onlyLetters(input) {
+        // Chỉ cho phép các ký tự chữ cái và dấu cách
+        input.value = input.value.replace(/[^a-zA-Z\s]/g, '');
+    }
+</script>
+@section Scripts {
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}

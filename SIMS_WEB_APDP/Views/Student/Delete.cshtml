@@ -1,0 +1,62 @@
+﻿@model SIMS_WEB_APDP.Models.Student
+
+<style>
+    .container{
+        display: flex;
+        flex-direction:column; 
+        text-align:center;
+        margin-top: 80px;
+        background-color: grey;
+        border-radius: 30px;
+        width: 50%;
+    }
+
+    h2{
+        font-weight: 700;
+        font-size: 40px;
+    }
+
+    h4{
+        font-size: 15px;
+        margin-bottom: 40px;
+    }
+
+    .list{
+        
+    }
+</style>
+
+
+<div class="container">
+    <h2>Confirm Delete</h2>
+
+<div class="content">
+    <h4>( Are you sure you want to delete this student? )</h4>
+    <div class="list">
+        <h5>@Model.FullName</h5>
+        <dl class="dl-horizontal">
+            <dt>ID</dt>
+            <dd>@Model.Id</dd>
+            <dt>Full Name</dt>
+            <dd>@Model.FullName</dd>
+            <dt>Birth Year</dt>
+            <dd>@Model.BirthYear.Year</dd>
+            <dt>Gender</dt>
+            <dd>@Model.Gender</dd>
+            <dt>Phone Number</dt>
+            <dd>@Model.PhoneNumber</dd>
+            <dt>Email</dt>
+            <dd>@Model.Email</dd>
+            <dt>Major</dt>
+            <dd>@Model.Major</dd>
+        </dl>
+    </div>
+
+    <form asp-action="DeleteConfirmed" method="post">
+        <input type="hidden" name="id" value="@Model.Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" />
+        <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
+
+</div>

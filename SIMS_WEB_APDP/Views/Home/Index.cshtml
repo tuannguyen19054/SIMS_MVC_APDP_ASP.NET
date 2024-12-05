@@ -1,0 +1,110 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+
+    :root {
+        --color-one: #103178;
+        --color-two: #fec700;
+        --color-text: #5b6c8e;
+    }
+
+    .section-one {
+        background-color: #fff;
+        padding: 100px 0;
+    }
+
+        .section-one .inner-wrap {
+            display: flex;
+        }
+
+        .section-one .inner-content {
+            width: 50%;
+        }
+
+            .section-one .inner-content .inner-title {
+                font-size: 60px;
+                color: var(--color-one);
+            }
+
+            .section-one .inner-content .inner-desc {
+                font-size: 20px;
+                color: var(--color-one);
+                margin-bottom: 40px;
+            }
+
+            .section-one .inner-content .inner-list {
+                display: flex;
+                margin-bottom: 40px;
+            }
+
+            .section-one .inner-content .inner-item {
+                width: 50%;
+                color: var(--color-text);
+                font-size: 20px;
+                display: flex;
+                align-items: center;
+            }
+
+                .section-one .inner-content .inner-item i {
+                    font-size: 24px;
+                    margin-right: 10px;
+                }
+
+        .section-one .inner-image {
+            width: 50%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+            .section-one .inner-image img {
+                width: 100%;
+            }
+
+
+            .section-one .inner-image .inner-sale span:nth-child(1) {
+                font-size: 22px;
+            }
+
+            .section-one .inner-image .inner-sale span:nth-child(2) {
+                font-size: 42px;
+            }
+
+    .button {
+        background: var(--color-two);
+        color: #fff;
+        padding: 12px 32px;
+        font-size: 18px;
+        border-radius: 45px;
+        text-decoration: none;
+    }
+
+    .button-two:hover {
+        background: #fff;
+        border: 2px solid var(--color-two);
+        color: var(--color-two);
+        transition: 0.5s;
+    }
+</style>
+<div class="section-one">
+    <div class="container">
+        <div class="inner-wrap">
+            <div class="inner-content">
+                <h1 class="inner-title">Welcome<br>Students</h1>
+                <p class="inner-desc">BTEC FPT</p>
+            </div>
+            <div class="inner-image">
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</html>
+

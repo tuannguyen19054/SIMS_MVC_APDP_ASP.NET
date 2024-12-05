@@ -1,0 +1,50 @@
+﻿@model IEnumerable<SIMS_WEB_APDP.Models.Course>
+
+@{
+    ViewData["Title"] = "Course";
+
+}
+
+<div class="container mt-4">
+    @* Bố trí thanh tìm kiếm và liên kết Create New Course trên cùng một dòng *@
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h1>@ViewData["Title"]</h1>
+        <div class="d-flex">
+            <form asp-controller="Course" asp-action="Index" method="get" class="d-flex me-3">
+                <input type="text" name="searchString" class="form-control me-2" placeholder="Search Courses" />
+                <button type="submit" class="btn btn-primary">Search</button>
+            </form>
+            <a asp-controller="Course" asp-action="Create" class="btn btn-success">Create New Course</a>
+        </div>
+    </div>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Course Name</th>
+                <th>Teacher Name</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var course in Model)
+            {
+                <tr>
+                    <td>@course.Id</td>
+                    <td>@course.courseName</td>
+                    <td>@course.teacherName</td>
+                    <td>
+                        <a asp-controller="Course" asp-action="Edit" asp-route-id="@course.Id" class="btn btn-warning btn-sm">Edit</a> |
+                        <a asp-controller="Course" asp-action="Delete" asp-route-id="@course.Id" class="btn btn-danger btn-sm">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+         
+        
+       
+    </table>
+   
+</div>
+

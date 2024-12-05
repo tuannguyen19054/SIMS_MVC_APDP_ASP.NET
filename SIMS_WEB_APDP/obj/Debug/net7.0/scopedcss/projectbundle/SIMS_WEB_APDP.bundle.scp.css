@@ -1,0 +1,49 @@
+/* _content/SIMS_WEB_APDP/Views/Shared/_Layout.cshtml.rz.scp.css */
+/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-kh29dhrmpp] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-kh29dhrmpp] {
+  color: #0077cc;
+}
+
+.btn-primary[b-kh29dhrmpp] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-kh29dhrmpp], .nav-pills .show > .nav-link[b-kh29dhrmpp] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-kh29dhrmpp] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-kh29dhrmpp] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-kh29dhrmpp] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-kh29dhrmpp] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-kh29dhrmpp] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}

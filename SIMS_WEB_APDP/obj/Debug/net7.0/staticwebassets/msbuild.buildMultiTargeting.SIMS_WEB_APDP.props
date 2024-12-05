@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\SIMS_WEB_APDP.props" />
+</Project>

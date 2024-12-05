@@ -1,0 +1,83 @@
+﻿@model SIMS_WEB_APDP.Models.Student
+
+<div class="card shadow border-0 mt-4">
+    <div class="card-header bg-secondary bg-gradient ml-0 py-3">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="text-white py-2">Edit Student</h2>
+            </div>
+        </div>
+    </div>
+    <div class="card-body p-4">
+        <form asp-action="Edit" method="post" class="row">
+            <input asp-for="Id" hidden />
+            <div class="border p-3">
+                <div class="form-floating py-2 col-12">
+                    <input asp-for="FullName" class="form-control border-0 shadow" oninput="onlyLetters(this)" />
+                    <label asp-for="FullName" class="ms-2"></label>
+                    <span asp-validation-for="FullName" class="text-danger"></span>
+                </div>
+                <div class="form-floating py-2 col-12">
+                    <input asp-for="BirthYear" class="form-control border-0 shadow" type="date" />
+                    <label asp-for="BirthYear" class="ms-2"></label>
+                    <span asp-validation-for="BirthYear" class="text-danger"></span>
+                </div>
+               <div class="form-floating py-2 col-12">
+    <select asp-for="Gender" class="form-control border-0 shadow">
+        <option value="">-- Select Gender --</option>
+        <option value="Nam">Nam</option>
+        <option value="Nữ">Nữ</option>
+    </select>
+    <label asp-for="Gender" class="ms-2"></label>
+    <span asp-validation-for="Gender" class="text-danger"></span>
+</div>
+                <div class="form-floating py-2 col-12">
+                    <input type="text" asp-for="PhoneNumber" class="form-control border-0 shadow"  oninput="validatePhoneNumber(this)" />
+                    <label asp-for="PhoneNumber" class="ms-2"></label>
+                    <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                </div>
+                <div class="form-floating py-2 col-12">
+                    <input type="email" asp-for="Email" class="form-control border-0 shadow" />
+                    <label asp-for="Email" class="ms-2"></label>
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-floating py-2 col-12">
+                    <input asp-for="Major" class="form-control border-0 shadow" />
+                    <label asp-for="Major" class="ms-2"></label>
+                    <span asp-validation-for="Major" class="text-danger"></span>
+                </div>
+
+                <div class="row pt-2">
+                    <div class="col-6 col-md-3">
+                        <button type="submit" class="btn btn-primary form-control">Update</button>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <a asp-controller="Student" asp-action="Index" class="btn btn-outline-primary border form-control">
+                            Back to List
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+    function onlyLetters(input) {
+        // Chỉ cho phép các ký tự chữ cái và dấu cách
+        input.value = input.value.replace(/[^a-zA-Z\s]/g, '');
+    }
+    function validatePhoneNumber(input) {
+        // Chỉ cho phép nhập số
+        input.value = input.value.replace(/[^0-9]/g, '');
+
+        // Giới hạn độ dài tối đa là 10 số
+        if (input.value.length > 10) {
+            input.value = input.value.slice(0, 10);
+        }
+    }
+</script>
+@section Scripts {
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}
